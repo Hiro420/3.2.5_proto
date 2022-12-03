@@ -8447,7 +8447,7 @@ message PullRecentChatReq {
 // CmdId: 4973
 // EnetChannelId: 0
 // EnetIsReliable: true
-message HHFAMPFCAHO {
+message PullRecentChatRsp {
   int32 retcode = 2;
   repeated ChatInfo chat_info = 13;
 }
@@ -8456,14 +8456,14 @@ message HHFAMPFCAHO {
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message LNCJPIHJDNO {
+message ReadPrivateChatReq {
   uint32 target_uid = 14;
 }
 
 // CmdId: 4998
 // EnetChannelId: 0
 // EnetIsReliable: true
-message ECMGHLOELAG {
+message ReadPrivateChatRsp {
   int32 retcode = 15;
 }
 
@@ -10551,10 +10551,10 @@ message AGENFDIPMBO {
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message KKHDHEIJAOA {
+message EvtAvatarExitFocusNotify {
   ForwardType forward_type = 3;
   uint32 entity_id = 15;
-  Vector JCBKIEKPDEC = 4;
+  Vector finish_forward = 4;
 }
 
 // CmdId: 371
