@@ -3654,7 +3654,7 @@ message NIMLJEAJEPE {
 message AKFFDMKDJIL {
   int32 retcode = 9;
   bool GAJBKAGOHPH = 4;
-  repeated uint32 KNKKOOIDBHN = 3;
+  repeated uint32 card_list = 3;
 }
 
 // CmdId: 8711
@@ -3677,14 +3677,14 @@ message MJCCLMDLJHA {
 // EnetIsReliable: true
 // IsAllowClient: true
 message FOEGANAFAGK {
-  uint32 ADMFPENNLLK = 5;
+  uint32 card_id = 5;
 }
 
 // CmdId: 8163
 // EnetChannelId: 0
 // EnetIsReliable: true
 message DJNMCHNIPJM {
-  uint32 ADMFPENNLLK = 10;
+  uint32 card_id = 10;
   int32 retcode = 12;
 }
 
@@ -3937,7 +3937,7 @@ message PMKANOLNJDI {
 // EnetIsReliable: true
 message BLLJDKDOFEH {
   bool IFNGCJAJDNM = 11;
-  uint32 ADMFPENNLLK = 2;
+  uint32 card_id = 2;
   map<uint32, uint32> IOPOBLDNLEC = 15;
   bool MDHHMEJGLCH = 3;
 }
@@ -3947,7 +3947,7 @@ message BLLJDKDOFEH {
 // EnetIsReliable: true
 message BKHDOLAIIPE {
   bool GAJBKAGOHPH = 6;
-  repeated uint32 KNKKOOIDBHN = 15;
+  repeated uint32 card_list = 15;
 }
 
 // CmdId: 8061
@@ -3977,7 +3977,7 @@ message MNGJHHNNKCJ {
 // EnetChannelId: 0
 // EnetIsReliable: true
 message IEOKDMPEOLB {
-  uint32 ADMFPENNLLK = 3;
+  uint32 card_id = 3;
 }
 
 // CmdId: 8004
@@ -3997,7 +3997,7 @@ message JECKPBGAKGD {
 // EnetChannelId: 0
 // EnetIsReliable: true
 message OHHKBHKBDKH {
-  repeated HPFFIGAHMMP KNKKOOIDBHN = 3;
+  repeated HPFFIGAHMMP card_list = 3;
   repeated HPFFIGAHMMP ELPIMCJGKIL = 1;
 }
 
@@ -5286,14 +5286,14 @@ message NLBIPEHKAKN {
 message AHHLENFOGOP {
   uint32 mp_play_id = 10;
   bool KLPOMJLIOKN = 15;
-  uint32 ADMFPENNLLK = 2;
+  uint32 card_id = 2;
 }
 
 // CmdId: 8114
 // EnetChannelId: 0
 // EnetIsReliable: true
 message BPIGJJLIEPL {
-  uint32 ADMFPENNLLK = 2;
+  uint32 card_id = 2;
   bool KLPOMJLIOKN = 6;
   int32 retcode = 1;
   uint32 mp_play_id = 10;
@@ -5305,7 +5305,7 @@ message BPIGJJLIEPL {
 // IsAllowClient: true
 message CHOFAEKBKGI {
   uint32 mp_play_id = 15;
-  uint32 ADMFPENNLLK = 11;
+  uint32 card_id = 11;
   bool KLPOMJLIOKN = 10;
 }
 
@@ -5313,7 +5313,7 @@ message CHOFAEKBKGI {
 // EnetChannelId: 0
 // EnetIsReliable: true
 message IJOLILHDLIF {
-  uint32 ADMFPENNLLK = 8;
+  uint32 card_id = 8;
   int32 retcode = 14;
   uint32 mp_play_id = 15;
   bool KLPOMJLIOKN = 4;
@@ -7433,9 +7433,9 @@ message JAMBBBHGBBO {
   bool PNLJLLCACHA = 12;
 
   enum IFKOHBGICOG {
-    LPMFPNJLJDH = 0;
-    ELBHOJLNECF = 1;
-    OMDCIMNCKJE = 2;
+    SETTLE_REASON_TIME_OUT = 0;
+    SETTLE_REASON_PLAY_END = 1;
+    SETTLE_REASON_PLAYER_QUIT = 2;
     GLHEIMJKDDE = 3;
   }
 }
@@ -9516,7 +9516,7 @@ message PlayerQuitDungeonRsp {
 // EnetIsReliable: true
 message NABNPIIECPM {
   repeated uint32 ONBKOIMPPOB = 14;
-  bool DJBCCOGLNPG = 8;
+  bool is_add = 8;
 }
 
 // CmdId: 984
@@ -9541,7 +9541,7 @@ message StrengthenPointData {
 }
 
 message DungeonSettleExhibitionInfo {
-  repeated FJHBBDKDOMA KNKKOOIDBHN = 12;
+  repeated FJHBBDKDOMA card_list = 12;
   OnlinePlayerInfo OBNGNNCGJDO = 6;
 }
 
@@ -12161,7 +12161,7 @@ message PIHOJOECHOM {
   uint32 BJHCDKNFDFN = 7;
   uint32 score = 8;
   uint32 PELHBJDMKAE = 12;
-  repeated FJHBBDKDOMA KNKKOOIDBHN = 3;
+  repeated FJHBBDKDOMA card_list = 3;
   float damage = 11;
   map<uint32, uint32> OODAGGBPJGG = 9;
   OnlinePlayerInfo OBNGNNCGJDO = 14;
@@ -12311,7 +12311,7 @@ message HMGFPHCKLBO {
 
 message GJGAFHGPLOB {
   OnlinePlayerInfo OBNGNNCGJDO = 13;
-  repeated FJHBBDKDOMA KNKKOOIDBHN = 8;
+  repeated FJHBBDKDOMA card_list = 8;
 }
 
 // CmdId: 5528
@@ -12473,7 +12473,7 @@ message PEFICFIEALI {
 
 message BMPGAMLJBJN {
   repeated Uint32Pair FKNPOEEHAFA = 3;
-  uint32 ADMFPENNLLK = 1;
+  uint32 card_id = 1;
 }
 
 message EBOOBOENGKA {
@@ -12759,7 +12759,7 @@ message ELALCCJALKO {
 }
 
 message JHMIODMKBPC {
-  repeated uint32 KNKKOOIDBHN = 15;
+  repeated uint32 card_list = 15;
 }
 
 message DKOLLDPAAFC {
@@ -12842,11 +12842,11 @@ message POFHMMPOKIJ {
 }
 
 message KADONMNEKNF {
-  repeated uint32 KNKKOOIDBHN = 2;
+  repeated uint32 card_list = 2;
 }
 
 message OHEDIJDEEHC {
-  uint32 ADMFPENNLLK = 3;
+  uint32 card_id = 3;
   uint32 GJMNCEIFKGF = 13;
 }
 
@@ -12895,7 +12895,7 @@ message HOKAIAHJAAN {
 message NGANBKIJAOJ {
   uint32 HDJLKMJPHEP = 5;
   repeated HOKAIAHJAAN HLCHCKBIKOO = 1124;
-  repeated POFHMMPOKIJ KNKKOOIDBHN = 15;
+  repeated POFHMMPOKIJ card_list = 15;
   uint32 BIANMOPDEHO = 8;
   uint32 OGPCGOEIDOB = 2;
   uint32 ADCCAGJGBEB = 4;
@@ -13022,7 +13022,7 @@ message MANJOKGOHLF {
   uint32 OGPCGOEIDOB = 6;
   uint32 BBDKGHPHPAA = 5;
   uint32 IOCIAOINODG = 1;
-  uint32 ADMFPENNLLK = 15;
+  uint32 card_id = 15;
   PKCKMOGBHJI FJEKGJCMFKF = 13;
 }
 
@@ -13164,12 +13164,12 @@ message CDBNHJKNPAF {
   bool EDNEMDELAGM = 6;
   uint32 GKAPAIIBFEF = 2;
   uint32 id = 13;
-  repeated uint32 KNKKOOIDBHN = 12;
+  repeated uint32 card_list = 12;
   repeated uint32 ANPKJGCFAAK = 15;
 }
 
 message PLLHEPKFJBL {
-  uint32 ADMFPENNLLK = 14;
+  uint32 card_id = 14;
   uint32 NPHJNMHGKMP = 9;
   repeated uint32 OAFMDJCPCJH = 5;
   uint32 JLIKOPCOMBD = 11;
@@ -13185,7 +13185,7 @@ message AKOALOPLAAH {
   repeated uint32 GEBHJAGKEID = 5;
   uint32 CJAMBMHKGKF = 8;
   repeated CDBNHJKNPAF JBGMMNJFBJM = 2;
-  repeated PLLHEPKFJBL KNKKOOIDBHN = 3;
+  repeated PLLHEPKFJBL card_list = 3;
   repeated uint32 JJCEINFHKOG = 1;
 }
 
@@ -13207,7 +13207,7 @@ message DADDJONNEAE {
 // EnetChannelId: 0
 // EnetIsReliable: true
 message ILHLLPODABF {
-  uint32 ADMFPENNLLK = 5;
+  uint32 card_id = 5;
   uint32 KGMOLLBGBEP = 1;
 }
 
@@ -13215,7 +13215,7 @@ message ILHLLPODABF {
 // EnetChannelId: 0
 // EnetIsReliable: true
 message CIIGOFEHDEP {
-  uint32 ADMFPENNLLK = 8;
+  uint32 card_id = 8;
   uint32 JLIKOPCOMBD = 3;
 }
 
@@ -13225,7 +13225,7 @@ message CIIGOFEHDEP {
 // IsAllowClient: true
 message LACCPODMLIG {
   uint32 KGMOLLBGBEP = 13;
-  uint32 ADMFPENNLLK = 14;
+  uint32 card_id = 14;
 }
 
 // CmdId: 7191
@@ -13234,7 +13234,7 @@ message LACCPODMLIG {
 message FKNOHAPCFPP {
   uint32 KGMOLLBGBEP = 10;
   int32 retcode = 7;
-  uint32 ADMFPENNLLK = 3;
+  uint32 card_id = 3;
 }
 
 // CmdId: 7911
@@ -13298,7 +13298,7 @@ message GPDADJMGJEF {
 // EnetIsReliable: true
 // IsAllowClient: true
 message EGHKADIOOJL {
-  repeated uint32 KNKKOOIDBHN = 9;
+  repeated uint32 card_list = 9;
   uint32 LDPGEEOEPCJ = 15;
   string name = 8;
   repeated uint32 ANPKJGCFAAK = 14;
@@ -13365,7 +13365,7 @@ message CLLFPHCAPPM {
 // EnetIsReliable: true
 message HFDFIDPAADJ {
   uint32 NPHJNMHGKMP = 14;
-  uint32 ADMFPENNLLK = 1;
+  uint32 card_id = 1;
 }
 
 // CmdId: 7963
@@ -13380,7 +13380,7 @@ message EAMJGBABEFB {
 // EnetChannelId: 0
 // EnetIsReliable: true
 message EENLFAPDOIL {
-  uint32 ADMFPENNLLK = 15;
+  uint32 card_id = 15;
   uint32 KGMOLLBGBEP = 10;
 }
 
@@ -13390,14 +13390,14 @@ message EENLFAPDOIL {
 // IsAllowClient: true
 message EEDOHMLJMBJ {
   uint32 JFLLALCHAKM = 9;
-  uint32 ADMFPENNLLK = 2;
+  uint32 card_id = 2;
 }
 
 // CmdId: 7996
 // EnetChannelId: 0
 // EnetIsReliable: true
 message KEMBFNOFIJB {
-  uint32 ADMFPENNLLK = 3;
+  uint32 card_id = 3;
   int32 retcode = 1;
   uint32 JFLLALCHAKM = 11;
 }
@@ -13406,7 +13406,7 @@ message KEMBFNOFIJB {
 // EnetChannelId: 0
 // EnetIsReliable: true
 message IOHNHHHJJIB {
-  repeated uint32 KNKKOOIDBHN = 8;
+  repeated uint32 card_list = 8;
 }
 
 // CmdId: 7808
@@ -14368,7 +14368,7 @@ message DDMNJHIBFJN {
 // EnetChannelId: 0
 // EnetIsReliable: true
 message JACOFBIAAFK {
-  repeated OnlinePlayerInfo JPPPFEOIBHP = 14;
+  repeated OnlinePlayerInfo player_info_list = 14;
   int32 retcode = 15;
 }
 
@@ -17075,7 +17075,7 @@ enum HADBAMDNKNB {
 }
 
 
-enum CLDOKPGGNOA {
+enum ClientReconnectReason {
   IJDEFCGGNBO = 0;
   KNAMBJHNOGA = 1;
 }
@@ -17145,30 +17145,30 @@ message PingRsp {
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message MGFICBHGEDC {
+message GetOnlinePlayerListReq {
 }
 
 // CmdId: 23
 // EnetChannelId: 0
 // EnetIsReliable: true
-message IKKOLOCEDDB {
+message GetOnlinePlayerListRsp {
   int32 retcode = 5;
   uint32 param = 2;
-  repeated OnlinePlayerInfo JPPPFEOIBHP = 7;
+  repeated OnlinePlayerInfo player_info_list = 7;
 }
 
 // CmdId: 91
 // EnetChannelId: 1
 // EnetIsReliable: true
-message OLNPCEIPHCI {
+message ServerTimeNotify {
   uint64 server_time = 13;
 }
 
 // CmdId: 48
 // EnetChannelId: 1
 // EnetIsReliable: true
-message PLAMENBMOAO {
-  string PJONPGAOGIP = 7;
+message ServerLogNotify {
+  string server_log = 7;
   HADBAMDNKNB FLLFBNOFNPK = 1;
   EABMGGEPDML KJDLICLFAOI = 5;
 }
@@ -17176,22 +17176,22 @@ message PLAMENBMOAO {
 // CmdId: 66
 // EnetChannelId: 0
 // EnetIsReliable: true
-message LAEHEOAFLBH {
-  CLDOKPGGNOA reason = 3;
+message ClientReconnectNotify {
+  ClientReconnectReason reason = 3;
 }
 
 // CmdId: 94
 // EnetChannelId: 0
 // EnetIsReliable: true
-message OGMBLOPABIN {
-  bytes LHMNAKIDIBA = 2;
+message RobotPushPlayerDataNotify {
+  bytes bin = 2;
 }
 
 // CmdId: 45
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message NIHBDPOPKAN {
+message ClientReportNotify {
   string AMLEAJLJDFO = 7;
   string JHJDJEBAFCM = 9;
 }
@@ -17213,9 +17213,9 @@ message UnionCmdNotify {
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message NGJDAAIILIK {
-  bool AOHALEPEKPP = 7;
-  oneof KADIANGJCDC {
+message GetOnlinePlayerInfoReq {
+  bool is_online_id = 7;
+  oneof player_id {
     uint32 target_uid = 1;
     string online_id = 2;
     string psn_id = 6;
@@ -17225,40 +17225,40 @@ message NGJDAAIILIK {
 // CmdId: 36
 // EnetChannelId: 0
 // EnetIsReliable: true
-message EIGAHBKNOCO {
+message GetOnlinePlayerInfoRsp {
   uint32 param = 6;
   int32 retcode = 8;
-  OnlinePlayerInfo AJOEJJJNLML = 12;
+  OnlinePlayerInfo target_player_info = 12;
   uint32 target_uid = 7;
 }
 
-message DFDCKPDDAMN {
-  uint32 HPJBGPBNGHO = 13;
+message SegmentInfo {
+  uint32 offset = 13;
   uint32 module = 6;
-  uint32 IGOKFFKENHE = 7;
+  uint32 size = 7;
 }
 
-message GKIKEPMMBME {
+message SegmentCRCInfo {
   uint32 module = 14;
   int32 retcode = 7;
-  uint32 IGOKFFKENHE = 13;
-  string HDGJGBFGHFN = 10;
-  uint32 HPJBGPBNGHO = 5;
+  uint32 size = 13;
+  string crc = 10;
+  uint32 offset = 5;
 }
 
 // CmdId: 61
 // EnetChannelId: 0
 // EnetIsReliable: true
-message EFJNFEOMMFJ {
-  repeated DFDCKPDDAMN info_list = 4;
+message CheckSegmentCRCNotify {
+  repeated SegmentInfo info_list = 4;
 }
 
 // CmdId: 57
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message JIKGJJCMEKJ {
-  repeated GKIKEPMMBME info_list = 12;
+message CheckSegmentCRCReq {
+  repeated SegmentCRCInfo info_list = 12;
 }
 
 message PlayerRTTInfo {
@@ -17454,33 +17454,33 @@ message GetPlayerMpModeAvailabilityRsp {
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message HKDLDIJNPGF {
-  bool MGFPOAGKMFN = 6;
+message PlayerSetOnlyMPWithPSPlayerReq {
+  bool is_only = 6;
 }
 
 // CmdId: 1825
 // EnetChannelId: 0
 // EnetIsReliable: true
-message GIGNMLPMHGA {
+message PlayerSetOnlyMPWithPSPlayerRsp {
   int32 retcode = 2;
-  bool MGFPOAGKMFN = 6;
+  bool is_only = 6;
 }
 
 // CmdId: 1812
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message DAKPPMHAJLM {
-  string JPOOIGKMPBO = 4;
+message PSPlayerApplyEnterMpReq {
+  string target_psn_id = 4;
 }
 
 // CmdId: 1850
 // EnetChannelId: 0
 // EnetIsReliable: true
-message LDCBCEHPALF {
+message PSPlayerApplyEnterMpRsp {
   uint32 param = 10;
   int32 retcode = 13;
-  string JPOOIGKMPBO = 8;
+  string target_psn_id = 8;
 }
 
 // CmdId: 1822
@@ -17641,36 +17641,36 @@ message LENGLACDMFJ {
   uint32 level = 5;
 }
 
-message OOPAGCPJFHF {
+message InBattleMechanicusCardInfo {
   uint32 BDOJCECEBEE = 1;
   uint32 FNAHKHODBKN = 9;
   uint32 KCIEINMEPDH = 13;
   uint32 NDAOOKKGJPH = 15;
-  uint32 ADMFPENNLLK = 8;
+  uint32 card_id = 8;
   PAEACDJOAIA NPGPEPFCDPO = 10;
 }
 
-message ELBLEKPEMEN {
+message InBattleMechanicusInfo {
   repeated uint32 MNNDELKIBLG = 356;
   uint32 CIJALCAMHCD = 2;
   repeated uint32 GHBEHPGBBIH = 1548;
   uint32 AJNLDIBIEAD = 13;
   uint64 IFIPKLOGEOF = 1;
-  repeated OOPAGCPJFHF DJPDCDEMIFB = 3;
+  repeated InBattleMechanicusCardInfo DJPDCDEMIFB = 3;
   uint64 IAPINOLIALF = 6;
   repeated LENGLACDMFJ LIBFODNBHDM = 4;
   repeated DDFNFIHNAMP PHKHEBPPKOB = 15;
   LPEMNJICPBA stage = 9;
-  uint32 IAKEJGOEJHN = 8;
-  uint64 NEDADCPMIHD = 5;
-  uint32 ELAPDEPBBBG = 14;
-  uint32 IILADAMBJPD = 12;
-  repeated OOPAGCPJFHF PCFFIBHBMKA = 11;
+  uint32 wait_seconds = 8;
+  uint64 wait_begin_time_us = 5;
+  uint32 escaped_monster_num = 14;
+  uint32 left_monster = 12;
+  repeated InBattleMechanicusCardInfo PCFFIBHBMKA = 11;
   uint32 EBOIGFMOKHK = 7;
   uint32 KKEPDEIIBMP = 10;
 }
 
-message AJHLCBOPLHN {
+message InBattleFleurFairInfo {
   uint32 OGCLPGLEOPD = 7;
   repeated uint32 NNPMBFGJELL = 3;
   repeated uint32 IJBKKLGOMIE = 11;
@@ -17684,7 +17684,7 @@ message PMPFAHLFHNC {
   uint32 FNJFIMHEPHH = 3;
 }
 
-message EAAKGGHJLPJ {
+message CharAmusementInfo {
   repeated PMPFAHLFHNC POIADJCLFLG = 11;
   uint32 OGCLPGLEOPD = 4;
   uint32 mp_play_id = 3;
@@ -17699,26 +17699,26 @@ message KDCHMEBANFN {
 }
 
 message NDFDMJJOINM {
-  repeated KBPGLPLOBNI JPPPFEOIBHP = 11;
+  repeated KBPGLPLOBNI player_info_list = 11;
   uint32 mp_play_id = 2;
-  uint32 NICENOMBDCC = 5;
+  uint32 group_id = 5;
 }
 
-message DIEGIFLKCGO {
+message MultistagePlayInfo {
   uint32 play_type = 9;
   uint32 begin_time = 6;
-  uint32 OAMAHEJFDEB = 13;
-  uint32 NICENOMBDCC = 7;
+  uint32 stage_index = 13;
+  uint32 group_id = 7;
   uint32 play_index = 1;
   uint32 duration = 8;
   uint32 stage_type = 5;
   oneof detail {
-    ELBLEKPEMEN mechanicus_info = 974;
-    AJHLCBOPLHN fleur_fair_info = 1665;
-    ODKJAAOIMAG hide_and_seek_info = 1341;
-    HKGAMFHJMCI chess_info = 851;
-    CFPEOIODLHE irodori_chess_info = 1005;
-    EAAKGGHJLPJ char_amusement_info = 1933;
+    InBattleMechanicusInfo mechanicus_info = 974;
+    InBattleFleurFairInfo fleur_fair_info = 1665;
+    HideAndSeekStageInfo hide_and_seek_info = 1341;
+    InBattleChessInfo chess_info = 851;
+    IrodoriChessInfo irodori_chess_info = 1005;
+    CharAmusementInfo char_amusement_info = 1933;
     KDCHMEBANFN brick_breaker_info = 492;
     NDFDMJJOINM coin_collect_info = 1373;
   }
@@ -17727,67 +17727,67 @@ message DIEGIFLKCGO {
 // CmdId: 5379
 // EnetChannelId: 0
 // EnetIsReliable: true
-message EEHGMGNEIGB {
-  DIEGIFLKCGO info = 2;
+message MultistagePlayInfoNotify {
+  MultistagePlayInfo info = 2;
 }
 
 // CmdId: 5368
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message ADOGHOCLDNI {
-  uint32 NICENOMBDCC = 1;
+message MultistagePlayFinishStageReq {
+  uint32 group_id = 1;
   uint32 play_index = 8;
 }
 
 // CmdId: 5355
 // EnetChannelId: 0
 // EnetIsReliable: true
-message BLCHJLKBDND {
-  uint32 ELAPDEPBBBG = 9;
+message InBattleMechanicusEscapeMonsterNotify {
+  uint32 escaped_monster_num = 9;
 }
 
 // CmdId: 5329
 // EnetChannelId: 0
 // EnetIsReliable: true
-message LCEDHKKMLCJ {
-  uint32 IILADAMBJPD = 3;
+message InBattleMechanicusLeftMonsterNotify {
+  uint32 left_monster = 3;
 }
 
 // CmdId: 5398
 // EnetChannelId: 0
 // EnetIsReliable: true
-message KBODCAELJGE {
-  map<uint32, uint32> JJOGEEEHJBB = 1;
+message InBattleMechanicusBuildingPointsNotify {
+  map<uint32, uint32> player_building_points_map = 1;
 }
 
 // CmdId: 5384
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message LOLLBEECAJP {
-  uint32 NICENOMBDCC = 11;
-  uint32 ADMFPENNLLK = 8;
+message InBattleMechanicusPickCardReq {
+  uint32 group_id = 11;
+  uint32 card_id = 8;
   uint32 play_index = 9;
 }
 
 // CmdId: 5323
 // EnetChannelId: 0
 // EnetIsReliable: true
-message NPLNDKFEBHN {
-  uint32 NICENOMBDCC = 2;
+message InBattleMechanicusPickCardRsp {
+  uint32 group_id = 2;
   int32 retcode = 13;
   uint32 play_index = 8;
-  uint32 ADMFPENNLLK = 6;
+  uint32 card_id = 6;
 }
 
 // CmdId: 5391
 // EnetChannelId: 0
 // EnetIsReliable: true
-message APKJNKHCKOL {
+message InBattleMechanicusPickCardNotify {
   uint32 play_index = 10;
-  uint32 ADMFPENNLLK = 15;
-  uint32 NICENOMBDCC = 1;
+  uint32 card_id = 15;
+  uint32 group_id = 1;
   uint32 entity_id = 3;
 }
 
@@ -17795,54 +17795,54 @@ message APKJNKHCKOL {
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message AJGAFELFLKO {
+message InBattleMechanicusConfirmCardReq {
   uint32 play_index = 11;
-  uint32 NICENOMBDCC = 4;
-  uint32 ADMFPENNLLK = 2;
+  uint32 group_id = 4;
+  uint32 card_id = 2;
 }
 
 // CmdId: 5366
 // EnetChannelId: 0
 // EnetIsReliable: true
-message IOCJEGNNCJD {
+message InBattleMechanicusConfirmCardRsp {
   uint32 play_index = 13;
-  uint32 NICENOMBDCC = 1;
+  uint32 group_id = 1;
   int32 retcode = 14;
-  uint32 ADMFPENNLLK = 5;
+  uint32 card_id = 5;
 }
 
 // CmdId: 5375
 // EnetChannelId: 0
 // EnetIsReliable: true
-message MNOEOKFDAHI {
+message InBattleMechanicusConfirmCardNotify {
   uint32 play_index = 12;
   uint32 entity_id = 13;
-  uint32 NICENOMBDCC = 10;
-  uint32 ADMFPENNLLK = 6;
+  uint32 group_id = 10;
+  uint32 card_id = 6;
 }
 
 // CmdId: 5394
 // EnetChannelId: 0
 // EnetIsReliable: true
-message LHEMECDDBEA {
-  uint32 IAKEJGOEJHN = 3;
-  repeated OOPAGCPJFHF KNKKOOIDBHN = 12;
-  uint32 NICENOMBDCC = 4;
+message InBattleMechanicusCardResultNotify {
+  uint32 wait_seconds = 3;
+  repeated InBattleMechanicusCardInfo card_list = 12;
+  uint32 group_id = 4;
   uint32 play_index = 15;
-  map<uint32, uint32> NMCHDJHCOJP = 5;
-  uint64 NEDADCPMIHD = 2;
+  map<uint32, uint32> player_confirmed_card_map = 5;
+  uint64 wait_begin_time_us = 2;
 }
 
 // CmdId: 5345
 // EnetChannelId: 0
 // EnetIsReliable: true
-message BFEFEMFMCAB {
-  uint32 NICENOMBDCC = 4;
+message MultistagePlayFinishStageRsp {
+  uint32 group_id = 4;
   uint32 play_index = 8;
   int32 retcode = 3;
 }
 
-message KMDPIIHFCPB {
+message MultistageSettleWatcherInfo {
   uint32 LIFAOJHELNJ = 14;
   bool FDNFOKDAHLP = 1;
   uint32 watcher_id = 13;
@@ -17852,33 +17852,33 @@ message KMDPIIHFCPB {
 // CmdId: 5301
 // EnetChannelId: 0
 // EnetIsReliable: true
-message MKBKNJCAEEJ {
+message InBattleMechanicusSettleNotify {
   bool is_success = 2;
   uint32 HAEOPAOBBFE = 8;
-  uint64 KAFCMOBDOMG = 6;
-  uint32 NICENOMBDCC = 1;
-  repeated KMDPIIHFCPB watcher_list = 10;
+  uint64 scene_time_ms = 6;
+  uint32 group_id = 1;
+  repeated MultistageSettleWatcherInfo watcher_list = 10;
   uint32 EKAIAPLNIPM = 15;
   uint32 NAMBBHMJJLN = 13;
   uint32 play_index = 7;
 }
 
 message NHGOOAAPGDD {
-  repeated KMDPIIHFCPB watcher_list = 15;
+  repeated MultistageSettleWatcherInfo watcher_list = 15;
   uint32 NAMBBHMJJLN = 6;
   bool is_success = 12;
   uint32 HAEOPAOBBFE = 2;
   uint32 play_index = 14;
-  uint32 NICENOMBDCC = 8;
+  uint32 group_id = 8;
   uint32 EKAIAPLNIPM = 9;
-  uint64 KAFCMOBDOMG = 13;
+  uint64 scene_time_ms = 13;
 }
 
 // CmdId: 5326
 // EnetChannelId: 0
 // EnetIsReliable: true
 message IGGEMDIFBHI {
-  uint32 NICENOMBDCC = 7;
+  uint32 group_id = 7;
   uint32 play_index = 4;
   oneof detail {
     NHGOOAAPGDD mechanicus_settle_info = 1846;
@@ -17891,7 +17891,7 @@ message IGGEMDIFBHI {
 // EnetChannelId: 0
 // EnetIsReliable: true
 message KCIHMHPKIJA {
-  uint32 NICENOMBDCC = 8;
+  uint32 group_id = 8;
   uint32 play_index = 2;
 }
 
@@ -17900,7 +17900,7 @@ message KCIHMHPKIJA {
 // EnetIsReliable: true
 message BPDMPMGPPIN {
   uint32 play_index = 3;
-  uint32 NICENOMBDCC = 2;
+  uint32 group_id = 2;
 }
 
 // CmdId: 5313
@@ -17950,7 +17950,7 @@ message FleurFairStageSettleNotify {
 // CmdId: 5325
 // EnetChannelId: 0
 // EnetIsReliable: true
-message PKEEPIPOGCN {
+message FleurFairFinishGalleryStageNotify {
 }
 
 message PLFKMOLPEGD {
@@ -17960,10 +17960,10 @@ message PLFKMOLPEGD {
   bool MJCPOOEGAEB = 2;
 }
 
-message ODKJAAOIMAG {
+message HideAndSeekStageInfo {
   repeated uint32 DMOMEMCDKOK = 14;
   JKLADCJPOIE stage_type = 4;
-  bool CMILCAKEPCA = 5;
+  bool is_record_score = 5;
   uint32 MHGLJLEIBPC = 10;
   map<uint32, PLFKMOLPEGD> DMLGLNMABCF = 1;
   uint32 HHDCIIBNMDN = 11;
@@ -17973,14 +17973,14 @@ message ODKJAAOIMAG {
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message JOKJPEBEGKC {
+message HideAndSeekSelectAvatarReq {
   uint32 avatar_id = 13;
 }
 
 // CmdId: 5365
 // EnetChannelId: 0
 // EnetIsReliable: true
-message LOIJLKIOHDB {
+message HideAndSeekSelectAvatarRsp {
   uint32 avatar_id = 8;
   int32 retcode = 15;
 }
@@ -17989,19 +17989,19 @@ message LOIJLKIOHDB {
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message HJGEDFCOFIH {
+message HideAndSeekSetReadyReq {
 }
 
 // CmdId: 5314
 // EnetChannelId: 0
 // EnetIsReliable: true
-message ENGPHDAMBID {
+message HideAndSeekSetReadyRsp {
   int32 retcode = 3;
 }
 
 message KCGNFLJPLEB {
   ProfilePicture profile_picture = 9;
-  repeated FJHBBDKDOMA KNKKOOIDBHN = 15;
+  repeated FJHBBDKDOMA card_list = 15;
   string nickname = 14;
   uint32 MEAKDLPFCDN = 5;
   uint32 uid = 13;
@@ -18011,45 +18011,45 @@ message KCGNFLJPLEB {
 // CmdId: 5395
 // EnetChannelId: 0
 // EnetIsReliable: true
-message NPIJDOIHBJH {
-  bool CMILCAKEPCA = 15;
+message HideAndSeekSettleNotify {
+  bool is_record_score = 15;
   repeated KCGNFLJPLEB BPCGPCPKBKF = 4;
   uint32 stage_type = 7;
   repeated uint32 CJJHGOCMMFK = 12;
   uint32 MFHFLBFIKEN = 14;
-  AFPGEMCBHHA reason = 11;
+  SettleReason reason = 11;
   repeated FJHBBDKDOMA OKEJJODJLPE = 8;
-  uint32 NICENOMBDCC = 1;
+  uint32 group_id = 1;
 
-  enum AFPGEMCBHHA {
-    LPMFPNJLJDH = 0;
-    ELBHOJLNECF = 1;
-    OMDCIMNCKJE = 2;
+  enum SettleReason {
+    SETTLE_REASON_TIME_OUT = 0;
+    SETTLE_REASON_PLAY_END = 1;
+    SETTLE_REASON_PLAYER_QUIT = 2;
   }
 }
 
 // CmdId: 5346
 // EnetChannelId: 0
 // EnetIsReliable: true
-message CIBHJPAGJIF {
+message HideAndSeekPlayerReadyNotify {
   repeated uint32 uid_list = 5;
 }
 
 // CmdId: 5352
 // EnetChannelId: 0
 // EnetIsReliable: true
-message JGPJDAFCMMM {
+message HideAndSeekPlayerSetAvatarNotify {
   uint32 costume_id = 15;
   uint32 uid = 12;
   uint32 avatar_id = 9;
 }
 
 message JFCJAOIDAIL {
-  uint32 ADMFPENNLLK = 8;
+  uint32 card_id = 8;
   uint32 PPFAMGLMFAN = 1;
 }
 
-message HKGAMFHJMCI {
+message InBattleChessInfo {
   uint32 AJNLDIBIEAD = 9;
   uint32 NLNCBGPBAHE = 7;
   uint32 KAKNOCJNFEF = 4;
@@ -18065,7 +18065,7 @@ message OFANHJGFJKK {
   uint32 EMNLLDJHMEI = 13;
   uint32 IPGILJCBABK = 12;
   bool is_success = 1;
-  uint64 KAFCMOBDOMG = 2;
+  uint64 scene_time_ms = 2;
   uint32 NKHDFHAPNCN = 10;
   uint32 LPANFEBFJOJ = 15;
   repeated FJHBBDKDOMA OKEJJODJLPE = 14;
@@ -18105,7 +18105,7 @@ message HMBFPAPCJDJ {
 
 message PLCNHBPAPGL {
   uint32 BDOJCECEBEE = 11;
-  uint32 ADMFPENNLLK = 4;
+  uint32 card_id = 4;
   bool LGOIPKGAHGC = 10;
 }
 
@@ -18113,17 +18113,17 @@ message PLCNHBPAPGL {
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message OPONCJNOJHG {
+message ChessPickCardReq {
   uint32 JPDAHCCBHKG = 14;
-  uint32 ADMFPENNLLK = 11;
+  uint32 card_id = 11;
 }
 
 // CmdId: 5306
 // EnetChannelId: 0
 // EnetIsReliable: true
-message OOEMNPIEIGJ {
+message ChessPickCardRsp {
   int32 retcode = 2;
-  uint32 ADMFPENNLLK = 10;
+  uint32 card_id = 10;
   uint32 JPDAHCCBHKG = 13;
 }
 
@@ -18186,7 +18186,7 @@ message GDKIJEJKHLJ {
   uint32 max_num = 2;
 }
 
-message CFPEOIODLHE {
+message IrodoriChessInfo {
   uint32 BIPIOBOGOBK = 14;
   uint32 FLNHHGJNOJB = 10;
   uint32 EKDGKMABNIL = 13;
@@ -18221,7 +18221,7 @@ message KMBBMPKEEBD {
   uint32 HENFDGLNCKG = 10;
   bool FCMNOAKFAFI = 12;
   uint32 BIPIOBOGOBK = 11;
-  uint64 KAFCMOBDOMG = 15;
+  uint64 scene_time_ms = 15;
   bool FBGHMDMKFAL = 3;
 }
 
@@ -19855,7 +19855,7 @@ message MarkNewNotify {
   repeated uint32 id_list = 2;
 }
 
-enum CGINGJGBCCN {
+enum ChapterState {
   STATUS_INVALID = 0;
   IPHFHDJKLPO = 1;
   FPGHMAKHAMP = 2;
@@ -20029,7 +20029,7 @@ message ChapterStateNotify {
   uint32 chapter_id = 12;
   NeedBeginTime need_begin_time = 4;
   NeedPlayerLevel need_player_level = 13;
-  CGINGJGBCCN CPFOLNMIGGK = 8;
+  ChapterState chapter_state = 8;
 
   message NeedPlayerLevel {
     bool is_limit = 8;
@@ -20053,7 +20053,7 @@ message QuestProgressUpdateNotify {
 
 message QuestVarOp {
   uint32 index = 4;
-  bool DJBCCOGLNPG = 15;
+  bool is_add = 15;
   int32 value = 1;
 }
 
@@ -21511,7 +21511,7 @@ message SceneDestroyEntityRsp {
 // EnetChannelId: 0
 // EnetIsReliable: true
 message ANHODPHPEJP {
-  bool DJBCCOGLNPG = 6;
+  bool is_add = 6;
   repeated uint32 OCFJNMAJHKM = 8;
 }
 
@@ -21637,7 +21637,7 @@ message KLINLFPLCJG {
 // EnetChannelId: 0
 // EnetIsReliable: true
 message LOHAEKLPONM {
-  repeated KLINLFPLCJG JPPPFEOIBHP = 11;
+  repeated KLINLFPLCJG player_info_list = 11;
 }
 
 message NOAMBPDPJCL {
@@ -22282,7 +22282,7 @@ message BLMIOFDLAJG {
 message PGLDFJMMGMG {
   repeated PlayerWidgetInfo player_widget_info_list = 3;
   repeated uint32 PHCPHJBAANB = 2;
-  repeated OnlinePlayerInfo JPPPFEOIBHP = 4;
+  repeated OnlinePlayerInfo player_info_list = 4;
 }
 
 // CmdId: 3127
@@ -22663,7 +22663,7 @@ message NKLHLHJNLIO {
 message PIJMMFPFGKJ {
   string tag = 2;
   uint32 entity_id = 1;
-  bool DJBCCOGLNPG = 15;
+  bool is_add = 15;
 }
 
 // CmdId: 3424
@@ -23025,7 +23025,7 @@ message EFAPIMEMGDO {
 message JCCLHPEHIDI {
   int64 param = 5;
   string nickname = 10;
-  repeated FJHBBDKDOMA KNKKOOIDBHN = 14;
+  repeated FJHBBDKDOMA card_list = 14;
   string online_id = 6;
   uint32 MEAKDLPFCDN = 12;
   uint32 uid = 8;
@@ -27002,7 +27002,7 @@ message ALOFJLAEHPI {
 message IPHHAHBDKEF {
   uint32 id = 1;
   Vector center = 2;
-  Vector HPJBGPBNGHO = 3;
+  Vector offset = 3;
 }
 
 message CHKGIGOHDPP {
