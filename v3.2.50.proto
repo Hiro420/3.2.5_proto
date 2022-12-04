@@ -672,11 +672,11 @@ message DMMDNOFBFBP {
 }
 
 message Achievement {
-  uint32 PHFGOAEDLEK = 14;
-  uint32 LIFAOJHELNJ = 4;
+  uint32 cur_progress = 14;
+  uint32 total_progress = 4;
   uint32 id = 8;
   Status status = 12;
-  uint32 PKFGGIEMPOI = 13;
+  uint32 finish_timestamp = 13;
 
   enum Status {
     STATUS_INVALID = 0;
@@ -924,10 +924,10 @@ message ActivityScheduleInfoNotify {
 }
 
 message ActivityWatcherInfo {
-  uint32 PHFGOAEDLEK = 10;
+  uint32 cur_progress = 10;
   uint32 watcher_id = 2;
   bool is_taken_reward = 12;
-  uint32 LIFAOJHELNJ = 1;
+  uint32 total_progress = 1;
 }
 
 // CmdId: 2012
@@ -1566,7 +1566,7 @@ message LGBIOLLCGEM {
 message IICFFKMIBFI {
   uint32 index = 9;
   uint32 chapter_id = 7;
-  uint32 PHFGOAEDLEK = 8;
+  uint32 cur_progress = 8;
 }
 
 // CmdId: 2077
@@ -4098,10 +4098,10 @@ message HBOFIJCKICL {
 message FPCHMLEIIOD {
   Vector pos = 14;
   bool MKJKJKAMHBH = 11;
-  uint32 LIFAOJHELNJ = 3;
+  uint32 total_progress = 3;
   uint32 ODLEIDPKBBH = 10;
   uint32 id = 9;
-  uint32 PHFGOAEDLEK = 6;
+  uint32 cur_progress = 6;
 }
 
 message KBGGDPDAKLC {
@@ -5767,7 +5767,7 @@ message RogueDiaryActivityDetailInfo {
   bool is_have_progress = 10;
   bool is_teach_dungeon_finished = 1;
   repeated JAIKKABNHGF PAKOANKLLEL = 15;
-  JBKNLFOFCCN PHFGOAEDLEK = 7;
+  JBKNLFOFCCN cur_progress = 7;
 }
 
 message JKFHHNNOCKJ {
@@ -8139,8 +8139,8 @@ message HPCBJPCPBGE {
   uint32 IHJCNEKLPAG = 4;
   ODBPHHBBIEO MBOGJFBBMHK = 14;
   uint32 DAHDCJNCALE = 13;
-  uint32 PHFGOAEDLEK = 6;
-  uint32 LIFAOJHELNJ = 10;
+  uint32 cur_progress = 6;
+  uint32 total_progress = 10;
   uint32 MBOMOLFKPPO = 12;
 
   enum ODBPHHBBIEO {
@@ -8505,7 +8505,7 @@ message DOJPLDLMLKO {
   JKFNBDMAFNN ELABACIEFHI = 7;
 }
 
-message POEMEPGLLLN {
+message CodexTypeData {
   CodexType type = 8;
   map<uint32, uint32> AFKBOIBELIK = 4;
   repeated bool OMBIHMIOEID = 1;
@@ -8515,11 +8515,11 @@ message POEMEPGLLLN {
 // CmdId: 4206
 // EnetChannelId: 0
 // EnetIsReliable: true
-message EOHHHBAPKBA {
-  repeated uint32 MAMPOPPGKBM = 14;
+message CodexDataFullNotify {
+  repeated uint32 recent_viewed_pushtips_list = 14;
   uint32 DCMJLCIFCEH = 11;
   uint32 ODPDLGEKIEM = 13;
-  repeated POEMEPGLLLN KMMLFFNIKGM = 4;
+  repeated CodexTypeData type_data_list = 4;
 }
 
 // CmdId: 4204
@@ -8554,7 +8554,7 @@ message HHKGCHPKALE {
 // EnetIsReliable: true
 // IsAllowClient: true
 message OGLPELEGCNP {
-  repeated POEMEPGLLLN KMMLFFNIKGM = 7;
+  repeated CodexTypeData type_data_list = 7;
 }
 
 // CmdId: 4203
@@ -8564,8 +8564,8 @@ message BFPFCHFOMDM {
   repeated uint32 CBGDAAOBGNB = 5;
   repeated uint32 IDNOLALHFFA = 9;
   int32 retcode = 1;
-  repeated uint32 MAMPOPPGKBM = 2;
-  repeated POEMEPGLLLN KMMLFFNIKGM = 13;
+  repeated uint32 recent_viewed_pushtips_list = 2;
+  repeated CodexTypeData type_data_list = 13;
 }
 
 // CmdId: 4201
@@ -9689,7 +9689,7 @@ message BEMCGNCNJIB {
 message IKDKOPFDGEJ {
   bool is_success = 14;
   uint32 IIJEPEKAGHG = 6;
-  uint32 PHFGOAEDLEK = 3;
+  uint32 cur_progress = 3;
   uint32 BMFJEKMHGGB = 8;
 }
 
@@ -10261,9 +10261,9 @@ message KALOFBDFJGL {
 // CmdId: 347
 // EnetChannelId: 0
 // EnetIsReliable: true
-message LBLOFLGHGDN {
-  uint32 mechanicus_difficult_level = 3;
-  uint32 KBGHGLMPKCN = 13;
+message HostPlayerNotify {
+  uint32 host_uid = 3;
+  uint32 host_peer_id = 13;
 }
 
 // CmdId: 393
@@ -10531,7 +10531,7 @@ message EvtAvatarSitDownNotify {
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message AGENFDIPMBO {
+message EvtAvatarEnterFocusNotify {
   bool CDAJJHIPIKH = 8;
   bool IJHHDFDIJMA = 1;
   bool GGHCEGJEHND = 12;
@@ -10681,8 +10681,8 @@ message EvtBeingHitsCombineNotify {
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message DFMLFHOCOIK {
-  uint64 KMNLAMPOOIO = 14;
+message EvtAvatarSitDownNotify {
+  uint64 chair_id = 14;
   uint32 entity_id = 11;
   Vector position = 1;
 }
@@ -10691,25 +10691,25 @@ message DFMLFHOCOIK {
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message KACIOIHIEID {
+message EvtAvatarStandUpNotify {
   uint32 entity_id = 4;
   int32 EBPACPNPKKJ = 3;
   int32 IMNGNLLMEFJ = 11;
-  uint64 KMNLAMPOOIO = 2;
+  uint64 chair_id = 2;
 }
 
 // CmdId: 325
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message FMEEAIOGDDD {
-  repeated FBHMKFIHPDA FHGNDPOMJCO = 12;
+message CreateMassiveEntityReq {
+  repeated ClientMassiveEntity massive_entity_list = 12;
 }
 
 // CmdId: 376
 // EnetChannelId: 0
 // EnetIsReliable: true
-message NLNIBKLEBGD {
+message CreateMassiveEntityRsp {
   int32 retcode = 12;
 }
 
@@ -10717,7 +10717,7 @@ message NLNIBKLEBGD {
 // EnetChannelId: 0
 // EnetIsReliable: true
 message AGBPMOAGHMO {
-  repeated CJBHDALPNFI FHGNDPOMJCO = 8;
+  repeated CJBHDALPNFI massive_entity_list = 8;
 }
 
 // CmdId: 349
@@ -10725,7 +10725,7 @@ message AGBPMOAGHMO {
 // EnetIsReliable: true
 // IsAllowClient: true
 message DPOBCJMFLHJ {
-  repeated FBHMKFIHPDA FHGNDPOMJCO = 4;
+  repeated ClientMassiveEntity massive_entity_list = 4;
 }
 
 // CmdId: 314
@@ -10873,7 +10873,7 @@ message NAMEJDFDEFC {
 // IsAllowClient: true
 message DLDHMFIILCD {
   Vector position = 3;
-  uint64 KMNLAMPOOIO = 15;
+  uint64 chair_id = 15;
 }
 
 // CmdId: 353
@@ -10881,7 +10881,7 @@ message DLDHMFIILCD {
 // EnetIsReliable: true
 message OIOEPBKFEDN {
   Vector position = 6;
-  uint64 KMNLAMPOOIO = 12;
+  uint64 chair_id = 12;
   int32 retcode = 11;
   uint32 entity_id = 5;
 }
@@ -12422,7 +12422,7 @@ message BCJGOOJLAFJ {
 message BDCKGOOKFFH {
   uint32 PCFOBEFJGGJ = 5;
   IBJBMGLLIBK reason = 15;
-  string LAMJAFNCADE = 3;
+  string transaction = 3;
 }
 
 // CmdId: 5580
@@ -12887,9 +12887,9 @@ message CIPEHFHIMAP {
 }
 
 message HOKAIAHJAAN {
-  uint32 PHFGOAEDLEK = 7;
+  uint32 cur_progress = 7;
   uint32 BMFJEKMHGGB = 1;
-  uint32 LIFAOJHELNJ = 2;
+  uint32 total_progress = 2;
 }
 
 message NGANBKIJAOJ {
@@ -15696,7 +15696,7 @@ message FLGKNGMPLON {
   uint32 progress = 2;
   KKEGGEGGIAO state = 11;
   uint32 id = 5;
-  uint32 LIFAOJHELNJ = 14;
+  uint32 total_progress = 14;
 
   enum KKEGGEGGIAO {
     STATUS_INVALID = 0;
@@ -15710,7 +15710,7 @@ message BHMCGGNAIPO {
   uint32 progress = 11;
   uint32 quest_id = 4;
   IDAHEFGBNLK state = 5;
-  uint32 LIFAOJHELNJ = 7;
+  uint32 total_progress = 7;
   uint32 CBHKPOLIKMH = 3;
 
   enum IDAHEFGBNLK {
@@ -16494,33 +16494,33 @@ message ODDOPECEAIB {
 // CmdId: 1468
 // EnetChannelId: 0
 // EnetIsReliable: true
-message EPLJJOJDJGD {
-  repeated MailData BALHKMBBJJG = 13;
-  repeated uint32 LJCEBEDMNPK = 1;
+message MailChangeNotify {
+  repeated MailData mail_list = 13;
+  repeated uint32 del_mail_id_list = 1;
 }
 
 // CmdId: 1447
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message JJKADKHCMCD {
-  repeated uint32 FMKLBPDIOIA = 9;
+message ReadMailNotify {
+  repeated uint32 mail_id_list = 9;
 }
 
 // CmdId: 1493
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message PMPMBNBGLNE {
-  repeated uint32 FMKLBPDIOIA = 9;
+message GetMailItemReq {
+  repeated uint32 mail_id_list = 9;
 }
 
 // CmdId: 1455
 // EnetChannelId: 0
 // EnetIsReliable: true
-message INIEIPLPPOH {
+message GetMailItemRsp {
   int32 retcode = 3;
-  repeated uint32 FMKLBPDIOIA = 11;
+  repeated uint32 mail_id_list = 11;
   repeated EquipParam item_list = 15;
 }
 
@@ -16528,16 +16528,16 @@ message INIEIPLPPOH {
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message FFOPDCFKHOH {
-  repeated uint32 FMKLBPDIOIA = 3;
+message DelMailReq {
+  repeated uint32 mail_id_list = 3;
 }
 
 // CmdId: 1498
 // EnetChannelId: 0
 // EnetIsReliable: true
-message LJGFLGMHFPK {
+message DelMailRsp {
   int32 retcode = 6;
-  repeated uint32 FMKLBPDIOIA = 5;
+  repeated uint32 mail_id_list = 5;
 }
 
 // CmdId: 1484
@@ -16565,7 +16565,7 @@ message DJCMMCCGPDO {
 // CmdId: 1491
 // EnetChannelId: 0
 // EnetIsReliable: true
-message FMDHKJALNDB {
+message ClientNewMailNotify {
   uint32 FBDGCFAALFN = 1;
   uint32 MANJMCPELLJ = 12;
 }
@@ -16574,45 +16574,45 @@ message FMDHKJALNDB {
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message LGOAFMEJDNO {
-  bool NJIKHFGHDLH = 1;
+message GetAllMailReq {
+  bool is_collected = 1;
 }
 
 // CmdId: 1466
 // EnetChannelId: 0
 // EnetIsReliable: true
-message MNCNNBLDMFG {
-  bool NJIKHFGHDLH = 11;
+message GetAllMailRsp {
+  bool is_collected = 11;
   int32 retcode = 6;
-  repeated MailData BALHKMBBJJG = 1;
-  bool BBFMMAAOMHM = 15;
+  repeated MailData mail_list = 1;
+  bool is_truncated = 15;
 }
 
 // CmdId: 1475
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message MFLMOOBBDHA {
-  repeated uint32 FMKLBPDIOIA = 14;
-  bool JELOPGIBJMB = 1;
+message ChangeMailStarNotify {
+  repeated uint32 mail_id_list = 14;
+  bool is_star = 1;
 }
 
 // CmdId: 1494
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message ECHEOLEGPCA {
-  bool NJIKHFGHDLH = 10;
+message GetAllMailNotify {
+  bool is_collected = 10;
 }
 
 // CmdId: 1445
 // EnetChannelId: 0
 // EnetIsReliable: true
-message EBGDJKECHPA {
-  string LAMJAFNCADE = 15;
-  bool NJIKHFGHDLH = 1;
+message GetAllMailResultNotify {
+  string transaction = 15;
+  bool is_collected = 1;
   int32 retcode = 5;
-  repeated MailData BALHKMBBJJG = 14;
+  repeated MailData mail_list = 14;
   uint32 LMCAADPAICM = 7;
   uint32 PGJIHELKCEA = 11;
 }
@@ -17843,10 +17843,10 @@ message MultistagePlayFinishStageRsp {
 }
 
 message MultistageSettleWatcherInfo {
-  uint32 LIFAOJHELNJ = 14;
+  uint32 total_progress = 14;
   bool FDNFOKDAHLP = 1;
   uint32 watcher_id = 13;
-  uint32 PHFGOAEDLEK = 10;
+  uint32 cur_progress = 10;
 }
 
 // CmdId: 5301
@@ -20855,8 +20855,8 @@ message LMNBOIBDFEO {
 message OPBBKNJCCOO {
   bool is_taken_reward = 4;
   uint32 watcher_id = 7;
-  uint32 PHFGOAEDLEK = 9;
-  uint32 LIFAOJHELNJ = 11;
+  uint32 cur_progress = 9;
+  uint32 total_progress = 11;
   uint32 CBGBLKHDCPA = 15;
 }
 
@@ -21313,7 +21313,7 @@ message SceneEntityMoveNotify {
   uint32 entity_id = 8;
 }
 
-message CLCDFPFLANP {
+message VehicleLocationInfo {
   float MNNMOCIIEAJ = 2;
   Vector rot = 14;
   uint32 gadget_id = 11;
@@ -21327,10 +21327,10 @@ message CLCDFPFLANP {
 // CmdId: 275
 // EnetChannelId: 1
 // EnetIsReliable: true
-message KMEKNHBPCMD {
-  repeated CLCDFPFLANP HAHEADDBIHJ = 15;
+message ScenePlayerLocationNotify {
+  repeated VehicleLocationInfo vehicle_loc_list = 15;
   uint32 scene_id = 14;
-  repeated NOAMBPDPJCL GJDCMMGJDJE = 1;
+  repeated PlayerLocationInfo player_loc_list = 1;
 }
 
 // CmdId: 294
@@ -21510,16 +21510,16 @@ message SceneDestroyEntityRsp {
 // CmdId: 280
 // EnetChannelId: 0
 // EnetIsReliable: true
-message ANHODPHPEJP {
+message SceneForceUnlockNotify {
   bool is_add = 6;
-  repeated uint32 OCFJNMAJHKM = 8;
+  repeated uint32 force_id_list = 8;
 }
 
 // CmdId: 278
 // EnetChannelId: 0
 // EnetIsReliable: true
-message HMDHNAGKJEE {
-  repeated uint32 OCFJNMAJHKM = 7;
+message SceneForceLockNotify {
+  repeated uint32 force_id_list = 7;
 }
 
 // CmdId: 242
@@ -21602,7 +21602,7 @@ message COHILDKDCEB {
 // EnetIsReliable: true
 // IsAllowClient: true
 message DMLEPNBNEHK {
-  uint32 EGJCFFDGGMK = 5;
+  uint32 weather_gadget_id = 5;
 }
 
 // CmdId: 225
@@ -21610,53 +21610,53 @@ message DMLEPNBNEHK {
 // EnetIsReliable: true
 // IsAllowClient: true
 message LFJMGGODIPC {
-  uint32 EGJCFFDGGMK = 11;
+  uint32 weather_gadget_id = 11;
 }
 
 // CmdId: 276
 // EnetChannelId: 0
 // EnetIsReliable: true
-message FDLELMEBCIB {
-  map<uint32, string> LBLBIDAKEIP = 11;
-  float LEMEFNHDFID = 3;
-  uint32 EGJCFFDGGMK = 13;
-  uint32 MENOKOHEBFO = 10;
+message SceneAreaWeatherNotify {
+  map<uint32, string> weather_value_map = 11;
+  float trans_duration = 3;
+  uint32 weather_gadget_id = 13;
+  uint32 climate_type = 10;
   uint32 weather_area_id = 14;
 }
 
-message KLINLFPLCJG {
+message ScenePlayerInfo {
   uint32 uid = 14;
-  bool OIEAKEAJLPD = 11;
-  uint32 uid = 13;
+  bool is_connected = 11;
+  uint32 peer_id = 13;
   string name = 5;
   uint32 scene_id = 10;
-  OnlinePlayerInfo CLHAIOHFNDG = 2;
+  OnlinePlayerInfo online_player_info = 2;
 }
 
 // CmdId: 265
 // EnetChannelId: 0
 // EnetIsReliable: true
-message LOHAEKLPONM {
-  repeated KLINLFPLCJG player_info_list = 11;
+message ScenePlayerInfoNotify {
+  repeated ScenePlayerInfo player_info_list = 11;
 }
 
-message NOAMBPDPJCL {
+message PlayerLocationInfo {
   Vector rot = 1;
   uint32 uid = 14;
   Vector pos = 9;
 }
 
-message JOCAOGMAEGG {
-  NOAMBPDPJCL KFNIONAPNFM = 6;
+message PlayerWorldLocationInfo {
+  PlayerLocationInfo player_loc = 6;
   uint32 scene_id = 7;
 }
 
 // CmdId: 249
 // EnetChannelId: 0
 // EnetIsReliable: true
-message BCIKLBOHMAG {
-  repeated JOCAOGMAEGG DJACECAFBOD = 4;
-  repeated NOAMBPDPJCL GJDCMMGJDJE = 7;
+message WorldPlayerLocationNotify {
+  repeated PlayerWorldLocationInfo player_world_loc_list = 4;
+  repeated PlayerLocationInfo player_loc_list = 7;
 }
 
 // CmdId: 214
@@ -21870,7 +21870,7 @@ message NGKMFEGHIPA {
   bool is_open = 4;
 }
 
-message JAGOBHGJOIP {
+message AvatarEnterSceneInfo {
   uint32 avatar_entity_id = 11;
   repeated ServerBuff server_buff_list = 14;
   AbilitySyncStateInfo EMAGOKCPPKN = 1;
@@ -21881,13 +21881,13 @@ message JAGOBHGJOIP {
   uint64 avatar_guid = 2;
 }
 
-message KDNKNCMLJOC {
+message TeamEnterSceneInfo {
   AbilitySyncStateInfo team_ability_info = 13;
   AbilityControlBlock ability_control_block = 9;
   uint32 team_entity_id = 11;
 }
 
-message LKGNBOJHNGN {
+message MPLevelEntityInfo {
   uint32 entity_id = 14;
   uint32 authority_peer_id = 15;
   AbilitySyncStateInfo ability_info = 1;
@@ -21897,26 +21897,26 @@ message LKGNBOJHNGN {
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message MPEGHAEONLO {
-  repeated JAGOBHGJOIP AKLKDMMOIHC = 13;
-  uint32 HLBLAKOHNLK = 3;
+message PlayerEnterSceneInfoNotify {
+  repeated AvatarEnterSceneInfo avatar_enter_info = 13;
+  uint32 cur_avatar_entity_id = 3;
   uint32 enter_scene_token = 12;
-  LKGNBOJHNGN EDLDAGACBBE = 6;
-  KDNKNCMLJOC LDKPDOEPNNO = 15;
+  MPLevelEntityInfo mp_level_entity_info = 6;
+  TeamEnterSceneInfo team_enter_info = 15;
 }
 
 // CmdId: 289
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message HOFDHMNACPP {
+message JoinPlayerSceneReq {
   uint32 target_uid = 8;
 }
 
 // CmdId: 264
 // EnetChannelId: 0
 // EnetIsReliable: true
-message IMIDIAEJNIB {
+message JoinPlayerSceneRsp {
   int32 retcode = 1;
 }
 
@@ -22088,8 +22088,8 @@ message LHFBOOLODAA {
 // EnetIsReliable: true
 // IsAllowClient: true
 message EIDAELGELPF {
-  map<uint32, string> LBLBIDAKEIP = 14;
-  uint32 EGJCFFDGGMK = 1;
+  map<uint32, string> weather_value_map = 14;
+  uint32 weather_gadget_id = 1;
 }
 
 // CmdId: 221
@@ -22256,13 +22256,13 @@ message BJEENFHPMEH {
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message ONDCNGBEIGI {
-  map<uint32, PropValue> AOLJFCBDHHM = 1;
+message WorldDataNotify {
+  map<uint32, PropValue> world_prop_map = 1;
 
-  enum HLFNPNBIIFB {
-    EFHNBFDJFLP = 0;
-    world_level = 1;
-    is_in_mp_mode = 2;
+  enum DataType {
+    DATA_TYPE_NONE = 0;
+    DATA_TYPE_WORLD_LEVEL = 1;
+    DATA_TYPE_IS_IN_MP_MODE = 2;
   }
 }
 
@@ -22279,9 +22279,9 @@ message BLMIOFDLAJG {
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message PGLDFJMMGMG {
+message WorldPlayerInfoNotify {
   repeated PlayerWidgetInfo player_widget_info_list = 3;
-  repeated uint32 PHCPHJBAANB = 2;
+  repeated uint32 player_uid_list = 2;
   repeated OnlinePlayerInfo player_info_list = 4;
 }
 
@@ -22367,9 +22367,9 @@ message ChatHistoryNotify {
 // CmdId: 3058
 // EnetChannelId: 0
 // EnetIsReliable: true
-message CMGKIEKAOAD {
+message SceneDataNotify {
   repeated uint32 scene_tag_id_list = 8;
-  repeated string NILGJGLAAGI = 7;
+  repeated string level_config_name_list = 7;
 }
 
 // CmdId: 3001
@@ -22720,9 +22720,9 @@ message FHIGEHHEICK {
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message GEHLNLLAGGJ {
+message ClientLoadingCostumeVerificationNotify {
   uint64 guid = 7;
-  uint64 HOHLFIEKAML = 12;
+  uint64 prefab_hash = 12;
   uint32 costume_id = 6;
 }
 
@@ -23169,15 +23169,15 @@ message GACAOPIDPFL {
 // EnetChannelId: 0
 // EnetIsReliable: true
 // IsAllowClient: true
-message POFCFKDGGMI {
+message GetShopmallDataReq {
 }
 
 // CmdId: 729
 // EnetChannelId: 0
 // EnetIsReliable: true
-message IPHENFPMDCD {
+message GetShopmallDataRsp {
   int32 retcode = 13;
-  repeated uint32 BHBLFBCGLHA = 9;
+  repeated uint32 shop_type_list = 9;
 }
 
 message FIFDEKKDADA {
@@ -25635,10 +25635,10 @@ enum EventTriggerType {
 
 
 enum MailCollectState {
-  BDCNCBNKOPM = 0;
-  EKBIIFHDHAL = 1;
-  DKBCPBPNAMJ = 2;
-  GPHCHHEPMNJ = 3;
+  MAIL_COLLECT_STATE_COLLECTIBLE_UNKNOWN = 0;
+  MAIL_COLLECT_STATE_NOT_COLLECTIBLE = 1;
+  MAIL_COLLECT_STATE_COLLECTIBLE_UNCOLLECTED = 2;
+  MAIL_COLLECT_STATE_COLLECTIBLE_COLLECTED = 3;
 }
 
 
@@ -27015,7 +27015,7 @@ message CHKGIGOHDPP {
   Vector NCOFGGHPDHM = 7;
 }
 
-message FBHMKFIHPDA {
+message ClientMassiveEntity {
   uint32 entity_type = 1;
   uint32 config_id = 2;
   int64 EPMODICLGLN = 3;
