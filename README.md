@@ -1,1 +1,1 @@
-# 3.2.5_proto
+# 3.2.5x protos for some anime game
